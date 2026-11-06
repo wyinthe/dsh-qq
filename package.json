@@ -1,0 +1,46 @@
+{
+  "name": "dsh-qq",
+  "version": "0.2.1",
+  "description": "Bridge QQ (NapCat / OneBot11) to DeepSeek Harness — text, images, stickers and voice notes.",
+  "type": "module",
+  "main": "./index.js",
+  "exports": "./index.js",
+  "files": [
+    "index.js",
+    "cordis.patch.yml",
+    "LICENSE",
+    "README.md",
+    "CHANGELOG.md"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "qq",
+    "onebot",
+    "onebot11",
+    "napcat",
+    "bridge",
+    "im"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wyinthe/dsh-qq.git"
+  },
+  "homepage": "https://github.com/wyinthe/dsh-qq#readme",
+  "bugs": {
+    "url": "https://github.com/wyinthe/dsh-qq/issues"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "peerDependencies": {
+    "@deepseek-ai/dsh": ">=0.2.0"
+  }
+}

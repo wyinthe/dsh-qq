@@ -1,0 +1,27 @@
+# 把这段放进 DSH profile 的 cordis.patch.yml（或插件自己的 cordis.patch.yml）。
+# 只改 per-config 的部分，不要照抄注释以外的内容。
+- insert:
+    - id: dsh-qq
+      name: dsh-qq
+      config:
+        # NapCat 那边「WebSocket 服务器」的地址与 token
+        wsUrl: ws://127.0.0.1:3001
+        token: change-me
+
+        # 必填：只接这些 QQ 号的私聊。不填 = 谁都不接
+        owners: [123456789]
+
+        # AI 能读写的工作目录；留空则用 DSH_WORKSPACE
+        cwd: D:/my-workspace
+
+        # 建议显式指定，避免默认模型指向没启动的本地服务
+        provider: deepseek-account
+        model: deepseek-flash
+
+        # 可选：语音转写脚本（约定见 README）
+        # earScript: D:/tools/transcribe.mjs
+
+        # 可选：把 QQ 接到已有的那间会话
+        # sessionId: session-xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+
+        groupMessages: false
